@@ -1,12 +1,14 @@
+yaml = require('js-yaml');
+fs = require('fs');
+var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+
 var Discord = require('discord.io');
 var bot = new Discord.Client({
     autorun: true,
     token: doc.token
 });
 var randmsgs = ["This is an example random message.", "Randomizations!", "Random, I say!", "Random, I say.", "Look, it’s a new randomized message!", "r"];
-var version = "1.4"
-yaml = require('js-yaml');
-fs = require('fs');
+var version = "1.4.1"
 var sender = "";
 
 function applyVar(thing) {
@@ -15,8 +17,6 @@ function applyVar(thing) {
     test = test.replace(doc.versionvar, version);
     return test
 }
-
-var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
 
 if (doc.startupconsole === "") {
     console.log("Started up config successfully!");
