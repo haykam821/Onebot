@@ -1,9 +1,23 @@
+# Variables to use in messages. Don’t change unless you’re redoing the messages that use these variables as well
+sendervar: "%u"
+versionvar: "%v"
+
 # KEEP THIS SAFE! If shared, others can send messages using your bot!
 token: ""
 
 # What channel should the bot use to allow you to invite it to a new channel:
-bot-invite-url: "http://bit.ly/2chWygB"
+botinviteurl: "http://bit.ly/2chWygB"
+
 
 # What username would you like to use for the hoster name? (Not yet implemented)
-hoster-discord: ""
-hoster-github: ""
+hosterdiscord: ""
+hostergithub: ""
+
+# Test message on start-up. Leave blank for default.
+startupconsole: ""
+startupevent: ""
+
+# Version command
+
+versionevent: "%u asked for the version number."
+versionreply: "I’m running the version v%v!"
