@@ -8,6 +8,9 @@ token: ""
 # What channel should the bot use to allow you to invite it to a new channel:
 botinviteurl: "http://bit.ly/2chWygB"
 
+# What prefix would you like the bot to listen for? (default is an asterisk)
+prefix: "*"
+
 
 # What username would you like to use for the hoster name? (Not yet implemented)
 hosterdiscord: ""
