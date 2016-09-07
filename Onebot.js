@@ -4,7 +4,7 @@ var bot = new Discord.Client({
     token: "ADD-YOUR-TOKEN-HERE"
 });
 var randmsgs = ["This is an example random message.", "Randomizations!", "Random, I say!", "Random, I say.", "Look, it’s a new randomized message!"];
-var version = "1.1"
+var version = "1.2"
 
 bot.on('ready', function(event) {
     bot.sendMessage({
@@ -144,24 +144,35 @@ bot.on('message', function(user, userID, channelID, message, event) {
         }
     }
     if (message.startsWith("*js ")) {
-        var jstest = message.match(/^.{4}(.*)/)[1];
-        try {
-            eval(bot.sendMessage({
-                to: channelID,
-                message: eval(message.match(/^.{4}(.*)/)[1])
-            }));
-            eval(bot.sendMessage({
-                to: 222393788755083264,
-                message: eval(user + " ran JavaScript code (`" + jstest + "`) with output: `" + eval(message.match(/^.{4}(.*)/)[1]) + "`.")
-            }));
-        } catch (err) {
+        if (userID === "222369396214071297") {
+            var jstest = message.match(/^.{4}(.*)/)[1];
+            try {
+                eval(bot.sendMessage({
+                    to: channelID,
+                    message: eval(message.match(/^.{4}(.*)/)[1])
+                }));
+                eval(bot.sendMessage({
+                    to: 222393788755083264,
+                    message: eval(user + " ran JavaScript code (`" + jstest + "`) with output: `" + eval(message.match(/^.{4}(.*)/)[1]) + "`.")
+                }));
+            } catch (err) {
+                bot.sendMessage({
+                    to: "222393788755083264",
+                    message: user + " ran JavaScript code (`" + jstest + "`) with errors: `" + err + "`."
+                })
+                bot.sendMessage({
+                    to: channelID,
+                    message: "You got errors: `" + err + "`!"
+                });
+            }
+        } else {
             bot.sendMessage({
                 to: "222393788755083264",
-                message: user + " ran JavaScript code (`" + jstest + "`) with errors: `" + err + "`."
+                message: user + " ran JavaScript code (`" + jstest + "`) without sufficient permission."
             })
             bot.sendMessage({
                 to: channelID,
-                message: "You got errors: `" + err + "`!"
+                message: "You are currently not allowed to use this feature. Try again later."
             });
         }
     }
