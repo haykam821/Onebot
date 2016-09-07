@@ -3,19 +3,13 @@ var bot = new Discord.Client({
     autorun: true,
     token: "ADD-YOUR-TOKEN-HERE"
 });
-var randmsgs = ["This is an example random message.", "Randomizations!", "Random, I say!", "Random, I say."];
+var randmsgs = ["This is an example random message.", "Randomizations!", "Random, I say!", "Random, I say.", "Look, it’s a new randomized message!"];
+var version = "1.1"
 
 bot.on('ready', function(event) {
     bot.sendMessage({
         to: "222393788755083264",
         message: "Logged in as " + bot.username + " (who has ID " + bot.id + ")"
-    });
-});
-
-bot.on('disconnected', function() {
-    bot.sendMessage({
-        to: "222393788755083264",
-        message: "Bot logged out."
     });
 });
 
@@ -38,6 +32,16 @@ bot.on('message', function(user, userID, channelID, message, event) {
         bot.sendMessage({
             to: channelID,
             message: "Ping!"
+        });
+    }
+    if (message === "*ver" || message === "*version") {
+        bot.sendMessage({
+            to: "222393788755083264",
+            message: user + " asked for the version number."
+        });
+        bot.sendMessage({
+            to: channelID,
+            message: "The version I’m running is v" + version + "!"
         });
     }
     if (message.startsWith("*repeat ")) {
