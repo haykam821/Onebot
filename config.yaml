@@ -1,0 +1,9 @@
+# KEEP THIS SAFE! If shared, others can send messages using your bot!
+token: ""
+
+# What channel should the bot use to allow you to invite it to a new channel:
+bot-invite-url: "http://bit.ly/2chWygB"
+
+# What username would you like to use for the hoster name? (Not yet implemented)
+hoster-discord: ""
+hoster-github: ""
