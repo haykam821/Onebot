@@ -200,7 +200,7 @@ function main() {
         }
         if (message === "*avatar") {
             bot.editUserInfo({
-                avatar: require('fs').readFileSync('/Users/Hayden/Desktop/defaultorange.txt', 'base64')
+                avatar: require('fs').readFileSync('defaultorange.txt', 'base64')
             });
             bot.sendMessage({
                 to: "222393788755083264",
