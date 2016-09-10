@@ -29,5 +29,5 @@ bot.on('message', function(user, userID, channelID, message, event) {
             tts: true,
             message: message.match(/^.{14}(.*)/)[1]
         });
-    }});
-})
+    }
+});
