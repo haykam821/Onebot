@@ -30,3 +30,4 @@ bot.on('message', function(user, userID, channelID, message, event) {
             message: message.match(/^.{14}(.*)/)[1]
         });
     }});
+})
