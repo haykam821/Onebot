@@ -8,7 +8,7 @@ var bot = new Discord.Client({
     token: doc.token
 });
 var randmsgs = ["This is an example random message.", "Randomizations!", "Random, I say!", "Random, I say.", "Look, it’s a new randomized message!", "r"];
-var version = "1.5.1"
+var version = "1.5.2"
 var sender = "";
 
 function applyVar(thing) {
