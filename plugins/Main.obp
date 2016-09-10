@@ -26,16 +26,6 @@ bot.on('message', function(user, userID, channelID, message, event) {
             message: "I run in the servers:\n```" + stringList + "```\n In total, I run on " + serverCount + " servers."
         });
     }
-    if (message === "*ver" || message === "*version") {
-        bot.sendMessage({
-            to: "222393788755083264",
-            message: doc.versionevent
-        });
-        bot.sendMessage({
-            to: channelID,
-            message: doc.versionreply
-        });
-    }
     if (message.startsWith("*log ")) {
         bot.sendMessage({
             to: "222393788755083264",
