@@ -35,7 +35,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
             to: channelID,
             message: applyVar(doc.versionreply)
         });
-    }    }
+    }
     if (message.startsWith("*log ")) {
         bot.sendMessage({
             to: "222393788755083264",
