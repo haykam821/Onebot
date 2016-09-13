@@ -1,5 +1,5 @@
 # DO NOT CHANGE!
-internalversion: "1.6.3"
+internalversion: "1.7"
 
 # Variables to use in messages. Don’t change unless you’re redoing the messages that use these variables as well
 sendervar: "%u"
