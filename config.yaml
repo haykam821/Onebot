@@ -5,7 +5,7 @@ internalversion: "1.7"
 sendervar: "%u"
 versionvar: "%v"
 
-# KEEP THIS SAFE! If shared, others can send messages using your bot!
+# KEEP THIS SAFE! If shared, others can send messages using your bot, like how the dev did just now! He regenerated his token, so who cares now?!
 token: "MjIyMzcwMDM5MDc1MDQ1Mzg3.Crnfxg.JLgXy2lp0CVDxAaf3-ei46_CbSA"
 
 # What channel should the bot use to allow you to invite it to a new channel:
