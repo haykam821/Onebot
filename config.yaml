@@ -1,12 +1,12 @@
 # DO NOT CHANGE!
-internalversion: "1.6.1"
+internalversion: "1.6.2"
 
 # Variables to use in messages. Don’t change unless you’re redoing the messages that use these variables as well
 sendervar: "%u"
 versionvar: "%v"
 
 # KEEP THIS SAFE! If shared, others can send messages using your bot!
-token: ""
+token: "MjIyMzcwMDM5MDc1MDQ1Mzg3.Crnfxg.JLgXy2lp0CVDxAaf3-ei46_CbSA"
 
 # What channel should the bot use to allow you to invite it to a new channel:
 botinviteurl: "http://bit.ly/2chWygB"
