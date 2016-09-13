@@ -5,7 +5,7 @@ exports.onMessageReceived = (function Version(bot, doc, user, userID, channelID,
     if (message === "*channel" || message === "*channelid") {
         bot.sendMessage({
             to: doc.logchannel,
-            message: user + " asked for the channel ID of the channel they posted their message in (" + channelID + ")"
+            message: user + " asked for the channel ID of the channel they posted their message in (`" + channelID + "`)"
         });
         bot.sendMessage({
             to: channelID,
