@@ -1,7 +1,14 @@
-exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, message, event) {
-    if(message === undefined){
-        return;
-    }
+yaml = require('js-yaml');
+fs = require('fs');
+var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+
+var Discord = require('discord.io');
+var bot = new Discord.Client({
+    autorun: true,
+    token: doc.token
+});
+
+bot.on('message', function(user, userID, channelID, message, event) {
     sender = user;
     if (message === "*servers" || message === "*server") {
         var list = Object.keys(bot.servers);
@@ -11,7 +18,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
         };
         var serverCount = stringList.split(/\r\n|\r|\n/).length - 1;
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " checked for all servers (currently " + serverCount + ") the bot is used on."
         });
         bot.sendMessage({
@@ -21,7 +28,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
     }
     if (message.startsWith("*log ")) {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " sent message to console: '" + message.match(/^.{5}(.*)/)[1] + "'"
         });
         bot.sendMessage({
@@ -31,7 +38,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
     }
     if (message === "*multiline") {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " tested multiline support."
         });
         bot.sendMessage({
@@ -41,7 +48,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
     }
     if (message === "*invite") {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " asked for the invite URL."
         });
         bot.sendMessage({
@@ -51,7 +58,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
     }
     if (message === "*language" || message === "*lang") {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " asked for the bot’s language."
         });
         bot.sendMessage({
@@ -62,7 +69,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
     if (message === "*randmsg" || message === "*randommsg") {
         var randmsgr = randmsgs[Math.floor(Math.random() * randmsgs.length)];
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " asked for a random message and got '" + randmsgr + "'."
         });
         bot.sendMessage({
@@ -79,7 +86,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
         }
         if (min === "N" && max === "α") {
             bot.sendMessage({
-                to: doc.logchannel,
+                to: "222393788755083264",
                 message: user + " asked for a random number (" + min + " through " + max + ") and got an Easter egg."
             });
             bot.sendMessage({
@@ -88,7 +95,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
             });
         } else {
             bot.sendMessage({
-                to: doc.logchannel,
+                to: "222393788755083264",
                 message: user + " asked for a random number (" + min + " through " + max + ") and got '" + randr + "'."
             });
             bot.sendMessage({
@@ -111,7 +118,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
                 }));
             } catch (err) {
                 bot.sendMessage({
-                    to: doc.logchannel,
+                    to: "222393788755083264",
                     message: user + " ran JavaScript code (`" + jstest + "`) with errors: `" + err + "`."
                 })
                 bot.sendMessage({
@@ -121,7 +128,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
             }
         } else {
             bot.sendMessage({
-                to: doc.logchannel,
+                to: "222393788755083264",
                 message: user + " ran JavaScript code (`" + jstest + "`) without sufficient permission."
             })
             bot.sendMessage({
@@ -135,7 +142,7 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
             avatar: require('fs').readFileSync('defaultorange.txt', 'base64')
         });
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " changed the avatar to code `defaultorange`."
         });
         bot.sendMessage({
