@@ -1,3 +1,5 @@
+var start = new Date();
+
 var yaml = require('js-yaml');
 var fs = require('fs');
 var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
