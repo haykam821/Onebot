@@ -1,10 +1,17 @@
-exports.repeat = (function Repeat(bot, doc, user, userID, channelID, message, event) {
-    if(message === undefined){
-        return;
-    }
+yaml = require('js-yaml');
+fs = require('fs');
+var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+
+var Discord = require('discord.io');
+var bot = new Discord.Client({
+    autorun: true,
+    token: doc.token
+});
+
+bot.on('message', function(user, userID, channelID, message, event) {
     if (message.startsWith("*repeat ")) {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " made bot repeat: '" + message.match(/^.{8}(.*)/)[1] + "'"
         });
         bot.sendMessage({
@@ -14,7 +21,7 @@ exports.repeat = (function Repeat(bot, doc, user, userID, channelID, message, ev
     }
     if (message.startsWith("*repeatspeech ")) {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: user + " made bot repeat with TTS: '" + message.match(/^.{14}(.*)/)[1] + "'"
         });
         bot.sendMessage({

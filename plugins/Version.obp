@@ -1,10 +1,17 @@
-exports.version = (function Version(bot, doc, user, userID, channelID, message, event) {
-    if(message === undefined){
-        return;
-    }
+yaml = require('js-yaml');
+fs = require('fs');
+var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+
+var Discord = require('discord.io');
+var bot = new Discord.Client({
+    autorun: true,
+    token: doc.token
+});
+
+bot.on('message', function(user, userID, channelID, message, event) {
     if (message === "*ver" || message === "*version") {
         bot.sendMessage({
-            to: doc.logchannel,
+            to: "222393788755083264",
             message: doc.versionevent
         });
         bot.sendMessage({
