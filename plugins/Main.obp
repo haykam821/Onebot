@@ -106,8 +106,8 @@ exports.onMessageReceived = (function Main(bot, doc, user, userID, channelID, me
                     message: eval(message.match(/^.{4}(.*)/)[1])
                 }));
                 eval(bot.sendMessage({
-                    to: 222393788755083264,
-                    message: eval(user + " ran JavaScript code (`" + jstest + "`) with output: `" + eval(message.match(/^.{4}(.*)/)[1]) + "`.")
+                    to: doc.logchannel,
+                    message: user + " ran JavaScript code (`" + jstest + "`) with output: `" + eval(message.match(/^.{4}(.*)/)[1]) + "`."
                 }));
             } catch (err) {
                 bot.sendMessage({
