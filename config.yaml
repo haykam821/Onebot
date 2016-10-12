@@ -26,7 +26,6 @@ hostergithub: ""
 startupconsole: ""
 startupevent: ""
 
-# Version command
-
+# Version command: variables don't work right now.
 versionevent: "%u asked for the version number."
 versionreply: "I’m running the version v%v!"
