@@ -33,3 +33,6 @@ startupevent: ""
 # Version command: variables don't work right now.
 versionevent: "%u asked for the version number."
 versionreply: "I’m running the version v%v!"
+
+# If true, uses HTTPS by default instead of HTTP when accessing the internet.
+prefersecure: true
