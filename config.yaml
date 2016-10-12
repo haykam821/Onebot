@@ -1,6 +1,6 @@
 # DO NOT CHANGE! If changed, it can break plugins.
 # Plugins rely on this version number so they know which features work.
-internalversion: "1.7"
+internalversion: "1.9.1"
 
 # Variables to use in custom messages. Don’t change unless you’re redoing the messages that use these variables as well
 sendervar: "%u"
