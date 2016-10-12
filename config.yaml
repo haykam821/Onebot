@@ -1,22 +1,26 @@
-# DO NOT CHANGE!
+# DO NOT CHANGE! If changed, it can break plugins.
+# Plugins rely on this version number so they know which features work.
 internalversion: "1.7"
 
-# Variables to use in messages. Don’t change unless you’re redoing the messages that use these variables as well
+# Variables to use in custom messages. Don’t change unless you’re redoing the messages that use these variables as well
 sendervar: "%u"
 versionvar: "%v"
 
-# KEEP THIS SAFE! If shared, others can send messages using your bot, like how the dev did just now! He regenerated his token, so who cares now?!
+# KEEP THIS SAFE! If shared, others can send messages using your bot.
 token: "MjIyMzcwMDM5MDc1MDQ1Mzg3.Crnfxg.JLgXy2lp0CVDxAaf3-ei46_CbSA"
 
-# What channel should the bot use to allow you to invite it to a new channel:
-botinviteurl: "http://bit.ly/2chWygB"
+# The URL that allows you to invite the bot to other Discord servers.
+# The second key is only used if the user wants the full URL, and is not normally visible.
+# Leave one or the other blank to disable the use of it.
+inviteurl: "http://bit.ly/2chWygB"
+inviteurlfull: "https://discordapp.com/oauth2/authorize?&client_id=222370039075045387&scope=bot"
 
-# What prefix would you like the bot to listen for? (default is an asterisk)
+# What character should precede your Onebot commands?
+# Default is an asterisk (*)
 prefix: "*"
 
-# What channel should the bot use to log everything:
+# Which channel should the bot log events to?
 logchannel: "222393788755083264"
-
 
 # What username would you like to use for the hoster name? (Not yet implemented)
 hosterdiscord: ""
