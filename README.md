@@ -11,6 +11,7 @@ Requires these Node.js modules to properly function without giving you errors:
 * `include-all` for loading the plugins
 * `jsdom` for loading jQuery
 * `node-notifier` for cross platform notifications
-* `esrever`for string reversal
+* `esrever` for string reversal
+* 'replaceall' for replacement of all string instances without regular expressions
 
 Additional modules may be needed for nonbundled plugins; please consult the developer's website for more information.
