@@ -14,4 +14,8 @@ Requires these Node.js modules to properly function without giving you errors:
 * `esrever` for string reversal
 * `replaceall` for replacement of all string instances without regular expressions
 
+You can use this single command to install every Node.js module in the above list.
+
+    npm install js-yaml discord.io fs path include-all jsdom node-notifier esrever replaceall
+
 Additional modules may be needed for nonbundled plugins; please consult the developer's website for more information.
