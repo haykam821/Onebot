@@ -20,6 +20,7 @@ inviteurlfull: "https://discordapp.com/oauth2/authorize?&client_id=2223700390750
 prefix: "*"
 
 # Which channel should the bot log events to?
+# Set to "console" to log to console (will be added in 1.10 version, NYI)
 logchannel: "222393788755083264"
 
 # What username would you like to use for the hoster name? (Not yet implemented)
