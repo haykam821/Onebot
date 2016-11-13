@@ -7,7 +7,7 @@ sendervar: "%u"
 versionvar: "%v"
 
 # KEEP THIS SAFE! If shared, others can send messages using your bot.
-token: "MjIyMzcwMDM5MDc1MDQ1Mzg3.Crnfxg.JLgXy2lp0CVDxAaf3-ei46_CbSA"
+token: ""
 
 # The URL that allows you to invite the bot to other Discord servers.
 # The second key is only used if the user wants the full URL, and is not normally visible.
