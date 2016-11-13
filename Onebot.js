@@ -10,7 +10,7 @@ var jsdom = require("jsdom");
 var dir = './plugins';
 
 if (!fs.existsSync(dir)){
-    console.log("Plugins folder don't exist. Creating.");
+    console.log("Plugins folder doesn't exist. Creating.");
     fs.mkdirSync(dir);
 }
 
