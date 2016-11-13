@@ -47,4 +47,4 @@ versionreply: "I’m running the version v%v!"
 prefersecure: true
 
 # Permission Precedence variable. Left variables take priority over right variables. 
-permprecedence:'s:c:r:u'
+permprecedence: 's:c:r:u'
