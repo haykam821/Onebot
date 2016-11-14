@@ -77,6 +77,8 @@ bot.on('ready', function(event) {
 });
 
 bot.on('message', function(user, userID, channelID, message, event) {
+  exports.syntaxes = [];
+  exports.descriptions = [];
   try{
     for(var i = 0; i < functions.length; i++){
       functions[i].onMessageReceived(bot, doc, user, userID, channelID, message, event);
