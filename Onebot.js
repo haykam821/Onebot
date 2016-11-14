@@ -6,6 +6,8 @@ var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
 var path = require('path');
 var includeAll = require('include-all');
 var jsdom = require("jsdom");
+exports.syntaxes = ["none"];
+exports.descriptions = ["none"];
 
 var dir = './plugins';
 
