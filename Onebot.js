@@ -86,6 +86,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
   } catch (error){
     console.log(error);
   }
+  console.log(exports.syntaxes + exports.descriptions);
 });
 
 if (doc.reloadconfig !=== -1) {
