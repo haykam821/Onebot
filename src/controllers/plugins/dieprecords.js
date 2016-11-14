@@ -11,10 +11,7 @@ exports.controlladder = (function adder(controller) {
                 message: "```" + tanknames + "```"
             });
         }
-
         getTanksDict(worker)
-
-
     }, 'For when you want a list of possible tanks you can use to submit records to the website')
 })
 
@@ -30,10 +27,7 @@ function getTanksDict(callback) {
             tanksnames.push(tanksjson[i].tankname)
         }
         tanksnames.sort()
-        console.log(tanksnames)
         callback({'nameid': tanksNameId, 'idname': tanksIdName, 'names': tanksnames})
-
-
     }
 
 

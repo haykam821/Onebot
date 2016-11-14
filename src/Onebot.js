@@ -16,10 +16,10 @@ var Discord = require('discord.io');
 
 Discord.Client.prototype.sendMsgLog=function(stuff){
     this.sendMessage(stuff)
-    this.sendMessage({
+/*    this.sendMessage({
         to: doc.logchannel,
         message: stuff.context.user+": "+stuff.message
-    });
+    });*/
 }
 
 var bot = new Discord.Client({
@@ -44,7 +44,7 @@ if (doc.startupconsole === "") {
 ;
 
 bot.on('ready', function (event) {
-    if (doc.startupevent === "") {
+    if (doc.startupevent === "test") {
         bot.sendMessage({
             to: doc.logchannel,
             message: "Logged in as " + bot.username + " (who has ID " + bot.id + ")"
