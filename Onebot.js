@@ -44,6 +44,11 @@ var randmsgs = ["This is an example random message.", "Randomizations!", "Random
 var version = doc.internalversion;
 var sender = "";
 
+exports.registerCmd = function(syntax, desc) {
+    exports.syntaxes.push(syntax);
+    exports.descriptions.push(desc);
+}
+
 function applyVar(thing) {
     test = eval('thing');
     test = test.replace(doc.sendervar, sender);
