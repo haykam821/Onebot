@@ -59,7 +59,7 @@ bot.on('ready', function (event) {
 
 bot.on('message', function (user, userID, channelID, message, event) {
     try {
-        if (message.startsWith(doc.prefix))
+        if (message.startsWith(doc.prefix)&&userID!=bot.id)
             cmdcontroller.handle({
                 controller:cmdcontroller,
                 bot: bot,
