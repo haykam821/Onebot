@@ -9,14 +9,15 @@ function CommandController(doc){
 CommandController.prototype.add=function(name,func,helptext){
     var nrparams=this.getArgs(func).length
 
-    if (nrparams>0) {
+    if (nrparams>=0) {
         this.commands[name] = {
             name: name,
             func: func,
             help: typeof helptext !== 'undefined' ? helptext : '',
             nrparams: nrparams
         }
-        this.numberOfCmds++;    console.log('added: '+name)
+        this.numberOfCmds++;
+        console.log('added: '+name)
 
     }
     else
@@ -138,8 +139,5 @@ CommandController.prototype.setup=function() {
 
 
 }
-
-
-
 
 module.exports=CommandController

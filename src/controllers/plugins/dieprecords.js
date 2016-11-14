@@ -11,8 +11,12 @@ exports.controlladder = (function adder(controller) {
                 message: "```" + tanknames + "```"
             });
         }
+
         getTanksDict(worker)
     }, 'For when you want a list of possible tanks you can use to submit records to the website')
+    controller.add('submit', function (context, name, gamemode, score, proof, tank) {
+        //code
+    }, 'For when you want to submit a new world record on desktop')
 })
 
 function getTanksDict(callback) {
