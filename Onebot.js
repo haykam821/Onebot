@@ -85,3 +85,8 @@ bot.on('message', function(user, userID, channelID, message, event) {
     console.log(error);
   }
 });
+
+setInterval(function() {
+doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+points = yaml.safeLoad(fs.readFileSync('points.yaml', 'utf8'));
+}, doc.reloadconfig * 1000);
