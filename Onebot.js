@@ -100,6 +100,8 @@ bot.on('ready', function(event) {
     }
 });
 
+var isBot = (doc.usertype == 'auto' && bot.bot) || doc.usertype == 'bot';
+
 var texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
 
 bot.on('message', function(user, userID, channelID, message, event, messageID) {
