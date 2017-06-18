@@ -9,6 +9,10 @@ versionvar: "%v"
 # KEEP THIS SAFE! If shared, others can send messages using your bot.
 token: ""
 
+# The type of account (auto, user, bot) you're running this on.
+# Unless you specifically want your bot to be a userbot or only take queries from itself, use auto mode.
+usertype: "auto"
+
 # The URL that allows you to invite the bot to other Discord servers.
 # The second key is only used if the user wants the full URL, and is not normally visible.
 # Leave one or the other blank to disable the use of it.
