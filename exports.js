@@ -1,6 +1,12 @@
 exports.syntaxes = [""];
 exports.descriptions = [""];
 
+var yaml = require('js-yaml');
+var fs = require('fs');
+var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+
+exports.config = doc;
+
 exports.randmsgs = ["Let's tone the random down within 3 releases."];
 exports.version = doc.internalversion;
 
