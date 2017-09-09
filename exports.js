@@ -20,15 +20,15 @@ exports.registerCmd = function(syntax, desc) {
   var syntaxgud = "<" + command + "> " + opts;
   console.log(syntaxgud)
   if (exports.syntaxes.indexOf(syntaxgud) == -1 && exports.descriptions.indexOf(descgud) == -1) {
-     exports.syntaxes.push(syntaxgud);
-     exports.descriptions.push(descgud);
+    exports.syntaxes.push(syntaxgud);
+    exports.descriptions.push(descgud);
   }
 }
 
 exports.makeCommand = function(code, syntax, desc) {
-var onebotdesc = desc === undefined ? "No description provided." : desc
-if (exports.syntaxes.indexOf(syntax) == -1 && exports.descriptions.indexOf(desc) == -1) {
-   exports.syntaxes.push(syntax);
+  var onebotdesc = desc === undefined ? "No description provided." : desc
+  if (exports.syntaxes.indexOf(syntax) == -1 && exports.descriptions.indexOf(desc) == -1) {
+    exports.syntaxes.push(syntax);
     exports.descriptions.push(onebotdesc);
-}
+  }
 }
