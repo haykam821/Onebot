@@ -3,7 +3,7 @@ var yaml = require('js-yaml');
 var fs = require('fs');
 var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
 var path = require('path');
-var jsdom = require("jsdom");
+var jsdom = require("jsdom/lib/old-api");
 
 var plugins = [];
 
@@ -73,7 +73,7 @@ bot.on('ready', function(event) {
 
 var isBot = (doc.usertype == 'auto' && bot.bot) || doc.usertype == 'bot';
 
-var texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
+//var texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
 
 bot.on('message', function(user, userID, channelID, message, event, messageID) {
   if (!isBot && userID !== bot.id) return;
@@ -88,12 +88,12 @@ bot.on('message', function(user, userID, channelID, message, event, messageID) {
 });
 
 var index = 5;
-texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
+//texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
 
 if (doc.reloadconfig !== -1) {
 setInterval(function() {
 doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
-points = yaml.safeLoad(fs.readFileSync('points.yaml', 'utf8'));
+//points = yaml.safeLoad(fs.readFileSync('points.yaml', 'utf8'));
 }, doc.reloadconfig * 1000);
 };
 
