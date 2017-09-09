@@ -1,7 +1,7 @@
 exports.syntaxes = [""];
 exports.descriptions = [""];
 
-exports.randmsgs = ["This is an example random message.", "Randomizations!", "Random, I say!", "Random, I say.", "Look, it’s a new randomized message!", "r"];
+exports.randmsgs = ["Let's tone the random down within 3 releases."];
 exports.version = doc.internalversion;
 
 exports.registerCmd = function(syntax, desc) {
