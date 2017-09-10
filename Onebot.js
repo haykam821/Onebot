@@ -17,7 +17,7 @@ if (!fs.existsSync(dir)) {
 var includeAll = require('include-all');
 var controllers = includeAll({
   dirname: path.join(__dirname, 'plugins'),
-  filter: /(.+)\.obp$/,
+  filter: /(.+)\.obp\.js$/,
   flatten: true,
   force: true,
   keepDirectoryPath: true
