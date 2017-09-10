@@ -18,7 +18,7 @@ You can use this single NPM command to install every Node.js module in the above
 
     npm install js-yaml discord.io fs path include-all jsdom node-notifier esrever replaceall
     
-^^^soon ^^^you ^^^will ^^^only ^^^need ^^^to ^^^download ^^^the ^^^repository!
+<sup>soon you will only need to download the repository!</sup>
 
 Additional modules may be needed for nonbundled plugins; please consult the developer's GitHub repository for more information.
 
