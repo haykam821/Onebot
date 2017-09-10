@@ -14,10 +14,6 @@ exports.registerCmd = function(syntax, desc) {
   // Please update to fit this! syntax will be [[command1, command2], opts] but desc stays the same
   // Will remove previous code in a later update, so update quickly.
   var descgud = desc === undefined ? "No description provided." : desc;
-  //console.log(syntax[0].join('|' + doc.prefix))
-  //var command = typeof syntax === "object" ? doc.prefix + syntax[0].join("|" + doc.prefix) : syntax.toString().split(" ")[0];
-  //var opts = typeof syntax === "object" ? syntax[1] : syntax.split(" ").slice(1).join(" ");
-  //var syntaxopts = syntax[1] === undefined ? "" : syntax[1];
 
   for (i in syntax) {
     if (exports.syntaxes.indexOf(syntax[i]) == -1) {
