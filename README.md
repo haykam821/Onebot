@@ -29,6 +29,15 @@ After installing the required Node.js modules discussed in the last section, you
 
 You are now able to run Onebot! Find your directory in a command prompt and `cd` to it. Simply type `node Onebot.js` and you should be ready to go!
 
+If you'd like to run two instances using the same source, use command-line options (Onebot's portable mode)! Here are some options you can do:
+
+* `token` uses the token given instead of the one found in the config.
+* `prefix` uses the prefix given instead of the one found in the config.
+
+Here's an example of the portable mode:
+
+    node Onebot.js -token <NOT PUTTING THIS HERE> -prefix !
+
 ## Development
 
 You may revise Onebot's core as much as you wish, as long as it falls under the MIT license's guidelines. Plugins are also required to be on GitHub under the MIT license in order for the developers of Onebot to not have to listen to support questions about third-party code, because that's honestly annoying.
