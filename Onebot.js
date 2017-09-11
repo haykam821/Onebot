@@ -4,6 +4,7 @@ var fs = require('fs');
 var doc = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
 var path = require('path');
 var jsdom = require("jsdom/lib/old-api");
+var portableOptions = require("minimist")(process.argv.slice(2));
 
 var plugins = [];
 
@@ -37,7 +38,7 @@ jsdom.env({
 var Discord = require('discord.io');
 var bot = new Discord.Client({
   autorun: true,
-  token: doc.token
+  token: portableOptions.token ? portableOptions.token : doc.token
 });
 
 function applyVar(thing) {
@@ -72,6 +73,10 @@ bot.on('ready', function(event) {
     });
   }
 });
+
+if (portableOptions.prefix) {
+  doc.prefix = portableOptions.prefix;
+}
 
 var isBot = (doc.usertype == 'auto' && bot.bot) || doc.usertype == 'bot';
 
