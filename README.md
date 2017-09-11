@@ -13,10 +13,11 @@ Onebot, without any plugins, requires these Node.js modules (and Node.js itself)
 * `node-notifier` for cross platform notifications
 * `esrever` for string reversal
 * `replaceall` for replacement of all string instances without regular expressions
+* `minimist` for portable, command-line options
 
 You can use this single NPM command to install every Node.js module in the above list.
 
-    npm install js-yaml discord.io fs path include-all jsdom node-notifier esrever replaceall
+    npm install js-yaml discord.io fs path include-all jsdom node-notifier esrever replaceall minimist
     
 <sup>soon you will only need to download the repository!</sup>
 
