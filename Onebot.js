@@ -91,7 +91,7 @@ var isBot = (doc.usertype == 'auto' && bot.bot) || doc.usertype == 'bot';
 //var texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
 
 bot.on('message', function(user, userID, channelID, message, event, messageID) {
-  if (!isBot && userID !== bot.id) return;
+  // if (!isBot && userID !== bot.id) return;
 
   try {
     for (var i = 0; i < functions.length; i++) {
