@@ -24,6 +24,14 @@ var controllers = includeAll({
   keepDirectoryPath: true
 });
 
+try {
+    for (var i = 0; i < functions.length; i++) {
+      functions[i].collectHelp()
+    }
+  } catch (error) {
+    console.log('damn it, how do you mess up help?', error);
+  }
+
 jsdom.env({
   html: "",
   scripts: ["http://code.jquery.com/jquery.js"],
