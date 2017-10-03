@@ -1,6 +1,6 @@
 # DO NOT CHANGE! If changed, it can break plugins.
 # Plugins rely on this version number so they know which features work.
-internalversion: "3.2.1"
+internalversion: "3.3"
 
 # Variables to use in custom messages. Don’t change unless you’re redoing the messages that use these variables as well
 sendervar: "%u"
@@ -50,5 +50,5 @@ versionreply: "I’m running the version v%v!"
 # If true, uses HTTPS by default instead of HTTP when accessing the internet.
 prefersecure: true
 
-# Permission Precedence variable. Left variables take priority over right variables. 
+# Permission Precedence variable. Left variables take priority over right variables.
 permprecedence: 's:c:r:u'
