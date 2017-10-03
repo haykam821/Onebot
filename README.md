@@ -18,7 +18,7 @@ Onebot, without any plugins, requires these Node.js modules (and Node.js itself)
 You can use this single NPM command to install every Node.js module in the above list.
 
     npm install js-yaml discord.io fs path include-all jsdom node-notifier esrever replaceall minimist
-    
+
 <sup>soon you will only need to download the repository!</sup>
 
 Additional modules may be needed for nonbundled plugins; please consult the developer's GitHub repository for more information.
@@ -40,4 +40,4 @@ Here's an example of the portable mode:
 
 ## Development
 
-You may revise Onebot's core as much as you wish, as long as it falls under the MIT license's guidelines. Plugins are also required to be on GitHub under the MIT license in order for the developers of Onebot to not have to listen to support questions about third-party code, because that's honestly annoying.
+You may revise Onebot's core as much as you wish, as long as it falls under [the MIT license](https://tldrlegal.com/license/mit-license)'s guidelines. Plugins are also required to be on GitHub under the MIT license in order for the developers of Onebot to not have to listen to support questions about third-party code, because that's honestly annoying.
