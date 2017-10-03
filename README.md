@@ -38,6 +38,10 @@ Here's an example of the portable mode:
 
     node Onebot.js -token <NOT PUTTING THIS HERE> -prefix !
 
+## Customization
+
+You can further customize Onebot to your liking!
+
 ## Development
 
 You may revise Onebot's core as much as you wish, as long as it falls under [the MIT license](https://tldrlegal.com/license/mit-license)'s guidelines. Plugins are also required to be on GitHub under the MIT license in order for the developers of Onebot to not have to listen to support questions about third-party code, because that's honestly annoying.
