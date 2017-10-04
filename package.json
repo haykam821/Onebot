@@ -1,6 +1,6 @@
 {
   "name": "onebot",
-  "version": "3.3",
+  "version": "3.3.1",
   "dependencies": {
     "discord.io": "^2.5.2",
     "esrever": "^0.2.0",
