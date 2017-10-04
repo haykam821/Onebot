@@ -23,6 +23,11 @@ inviteurlfull: "https://discordapp.com/oauth2/authorize?&client_id=2223700390750
 # Default is an asterisk (*)
 prefix: "*"
 
+# Which channel ID should we put restart messages for debugging?
+# Remember: channel IDs should be strings, not numbers.
+# Leave it blank for none.
+restart_channel: ""
+
 # Which channel should the bot log events to?
 # Set to "console" to log to console (will be added in 1.10 version, NYI)
 logchannel: "222393788755083264"
