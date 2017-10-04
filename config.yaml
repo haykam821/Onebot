@@ -44,8 +44,9 @@ logpurgecount: "-1"
 hosterdiscord: ""
 hostergithub: ""
 
-# Test message on start-up. Leave blank for default.
-startupconsole: ""
+# Test message on start-up.
+# Usually a string, but accepts other things.
+startupconsole: "Started up config successfully!"
 startupevent: ""
 
 # Version command: variables don't work right now.

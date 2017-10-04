@@ -56,11 +56,9 @@ function applyVar(thing) {
   return test;
 }
 
-if (doc.startupconsole === "") {
-  console.log("Started up config successfully!");
-} else {
-  console.log(doc.startupconsole);
-};
+if (doc.startupconsole !== "") {
+  console.log(doc.startupconsole.toString());
+}
 
 /*bot.on('disconnect', function(event) {
   bot.disconnect();
