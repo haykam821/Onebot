@@ -60,11 +60,11 @@ if (doc.startupconsole !== "") {
   console.log(doc.startupconsole.toString());
 }
 
-/*bot.on('disconnect', function(event) {
+bot.on('disconnect', function(event) {
   bot.disconnect();
   console.log("Tried to reconnect.")
   bot.connect();
-});*/
+});
 
 bot.on('ready', function(event) {
   if (doc.startupevent === "") {
