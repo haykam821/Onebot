@@ -29,7 +29,7 @@ try {
       functions[i].collectHelp()
     }
   } catch (error) {
-    console.log('damn it, how do you mess up help?', error);
+    console.log('error from help!', error);
   }
 
 jsdom.env({
