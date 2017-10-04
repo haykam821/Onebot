@@ -86,6 +86,10 @@ if (portableOptions.prefix) {
 
 var isBot = (doc.usertype == 'auto' && bot.bot) || doc.usertype == 'bot';
 
+var safedoc = doc;
+safedoc.internals.token = 'NOPE!';
+safedoc.token = 'NOPE!';
+
 //var texts = yaml.safeLoad(fs.readFileSync('texts.yaml', 'utf8'));
 
 bot.on('message', function(user, userID, channelID, message, event, messageID) {
@@ -93,7 +97,7 @@ bot.on('message', function(user, userID, channelID, message, event, messageID) {
 
   try {
     for (var i = 0; i < functions.length; i++) {
-      functions[i].onMessageReceived(bot, doc, user, userID, channelID, message, event, messageID);
+      functions[i].onMessageReceived(bot, safedoc, user, userID, channelID, message, event, messageID);
     }
   } catch (error) {
     console.log(error);
