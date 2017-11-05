@@ -54,7 +54,9 @@ versionevent: "%u asked for the version number."
 versionreply: "I’m running the version v%v!"
 
 # If true, uses HTTPS by default instead of HTTP when accessing the internet.
+# discordsecure overrides prefersecure and will encrypt the token when sent to Discord to authenticate! (RECOMMENDED OBVIOUSLY)
 prefersecure: true
+discordsecure: true
 
 # Permission Precedence variable. Left variables take priority over right variables.
 permprecedence: 's:c:r:u'
