@@ -1,6 +1,6 @@
 {
   "name": "onebot",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "dependencies": {
     "discord.io": "^2.5.2",
     "esrever": "^0.2.0",
@@ -11,5 +11,12 @@
     "node-notifier": "^5.1.2",
     "path": "^0.12.7",
     "replaceall": "^0.1.6"
+  },
+  "license": "MIT",
+  "description": "A simply complex and badly coded bot.",
+  "main": "Onebot.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/haykam821/Onebot.git"
   }
 }
