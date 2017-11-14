@@ -1,21 +1,30 @@
 #!/usr/bin/env node
 
 var dio = require('discord.io');
-var program = require('commander');
+var program = require('yargs');
 
-program.version('4.0.0');
+program
+  .command('run', 'Runs Onebot.', {}, run)
 
-program.command('run')
-  .description('Runs Onebot.')
-  .option('-t, --token', 'Specifies the token to use to authenticate with Discord.')
-  .action(function(){require('./run.js').run(program)});
+  .option('token')
+  .describe('token', 'Specifies the token to use to authenticate with Discord.')
+  .string('safe')
+  .require('token')
+  .alias('token', 't')
 
-program.command('add-plugin <name>', 'Enables the use of a module as a Onebot plugin.');
-program.command('remove-plugin <name>', 'Disables the use of a module as a Onebot plugin.');
+  .option('safe')
+  .describe('safe', 'If enabled, ignores the list of active plugins and only runs the main Onebot process.')
+  .boolean('safe')
+  .alias('safe', 's')
 
-program.parse(process.argv);
+  .command('add-plugin <name>', 'Enables the use of a module as a Onebot plugin.')
+  .command('remove-plugin <name>', 'Disables the use of a module as a Onebot plugin.')
 
-var run = function(program) {
+  .help()
+  .version('4.0.0')
+  .argv;
+
+function run(program) {
   var bot = new dio.Client({
     autorun: true,
     token: program.token
