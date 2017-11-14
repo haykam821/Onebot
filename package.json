@@ -2,7 +2,7 @@
   "name": "onebot",
   "version": "4.0.0",
   "dependencies": {
-    "commander": "^2.11.0",
+    "yargs": "^10.0.3",
     "discord.io": "^2.5.2",
     "esrever": "^0.2.0",
     "fs": "0.0.1-security",
