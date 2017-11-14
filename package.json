@@ -1,7 +1,8 @@
 {
   "name": "onebot",
-  "version": "3.3.2",
+  "version": "4.0.0",
   "dependencies": {
+    "commander": "^2.11.0",
     "discord.io": "^2.5.2",
     "esrever": "^0.2.0",
     "fs": "0.0.1-security",
@@ -16,7 +17,7 @@
   "description": "A simply complex and badly coded bot.",
   "main": "Onebot.js",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/haykam821/Onebot.git"
+    "type": "git",
+    "url": "https://github.com/haykam821/Onebot.git"
   }
 }
