@@ -1,27 +1,33 @@
 {
-	"name": "onebot",
-	"version": "4.1.0",
-	"dependencies": {
-		"discord.io": "^2.5.2",
-		"esrever": "^0.2.0",
-		"fs": "0.0.1-security",
-		"include-all": "^4.0.3",
-		"js-yaml": "^3.9.1",
-		"jsdom": "^11.2.0",
-		"netux": "^1.2.0",
-		"node-notifier": "^5.1.2",
-		"path": "^0.12.7",
-		"replaceall": "^0.1.6",
-		"yargs": "^10.0.3"
-	},
-	"license": "MIT",
-	"description": "A simply complex and badly coded bot.",
-	"main": "Onebot.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/haykam821/Onebot.git"
-	},
-	"bin": {
-		"onebot": "index.js"
-	}
+  "name": "onebot",
+  "version": "4.1.0",
+  "dependencies": {
+    "discord.io": "^2.5.2",
+    "esrever": "^0.2.0",
+    "fs": "0.0.1-security",
+    "include-all": "^4.0.3",
+    "js-yaml": "^3.9.1",
+    "jsdom": "^11.2.0",
+    "netux": "^1.2.0",
+    "node-notifier": "^5.1.2",
+    "path": "^0.12.7",
+    "replaceall": "^0.1.6",
+    "yargs": "^10.0.3",
+    "snyk": "^1.189.0"
+  },
+  "license": "MIT",
+  "description": "A simply complex and badly coded bot.",
+  "main": "Onebot.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haykam821/Onebot.git"
+  },
+  "bin": {
+    "onebot": "index.js"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
